@@ -1,6 +1,5 @@
 import greenfoot.*;
-public class Wall extends Solid {
+abstract public class Solid extends Actor {
     public void act() {
-
     }
 }

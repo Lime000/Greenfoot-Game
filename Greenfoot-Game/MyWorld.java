@@ -7,7 +7,8 @@ public class MyWorld extends World {
         setBackground("images/Background.png");
         prepare();
     } 
+    
     public void prepare() {
-
+        
     }
 }

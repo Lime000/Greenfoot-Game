@@ -1,0 +1,9 @@
+- Goal funktion (Teleport zu neuen Welt)
+- Maps bauen
+- Bilder malen
+- Enemy Pathfinding zu Player bei einer Bewegung
+- verbundene Walls
+- Health System
+- Fähigkeiten/ Gegenstände
+- Fallen, Laser, etc...
+- neue Gegner

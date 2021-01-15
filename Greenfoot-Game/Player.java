@@ -1,7 +1,18 @@
 import greenfoot.*;
 public class Player extends Entity {
     public void act() {
-
+        if (Greenfoot.isKeyDown("w")) {
+            move(Directions.UP);
+        }
+        if (Greenfoot.isKeyDown("a")) {
+            move(Directions.LEFT);
+        }
+        if (Greenfoot.isKeyDown("s")) {
+            move(Directions.DOWN);
+        }
+        if (Greenfoot.isKeyDown("d")) {
+            move(Directions.RIGHT);
+        }
     }
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {

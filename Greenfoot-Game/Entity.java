@@ -28,9 +28,9 @@ abstract public class Entity extends Actor {
                 break;
         }
         setImage(getDirectionImage(dir));
-        Greenfoot.delay(8);
         if(getOneObjectAtOffset​(dx, dy, Solid.class) == null) {
             setLocation(x + dx, y + dy);
         }
+        Greenfoot.delay(20);
     }
 }

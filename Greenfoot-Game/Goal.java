@@ -5,7 +5,7 @@ public class Goal extends Actor {
         world = newWorld;
     }
     public void act() {
-        if(isTouching(Player.class)) {
+        if(isTouching(Player.class) && world != null) {
             Greenfoot.setWorld(world);
         }
     }

@@ -1,6 +1,9 @@
 import greenfoot.*;
 public class Enemy_1 extends Entity {
     public void act() {
+        if (isTouching(Player.class)){
+            Greenfoot.stop();
+        }
 
     }
     protected GreenfootImage getDirectionImage(Directions dir) {

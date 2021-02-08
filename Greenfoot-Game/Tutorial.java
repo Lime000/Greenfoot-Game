@@ -23,9 +23,9 @@ public class Tutorial extends World {
         addObject(wall4,8,7);
         Wall wall5 = new Wall();
         addObject(wall5,8,8);
-        Enemy_1 enemy_1 = new Enemy_1();
+        Enemy_1 enemy_1 = new Enemy_1(Tutorial.class);
         addObject(enemy_1,7,13);
-        Enemy_1 enemy_12 = new Enemy_1();
+        Enemy_1 enemy_12 = new Enemy_1(Tutorial.class);
         addObject(enemy_12,15,3);
     }
 }

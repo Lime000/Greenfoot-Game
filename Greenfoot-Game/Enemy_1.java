@@ -1,8 +1,12 @@
 import greenfoot.*;
 public class Enemy_1 extends Entity {
+    private World start;
+    public Enemy_1() {
+        start = getWorld();
+    }
     public void act() {
         if (isTouching(Player.class)){
-            Greenfoot.stop();
+            Greenfoot.setWorld(start);
         }
 
     }

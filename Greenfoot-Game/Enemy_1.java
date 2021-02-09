@@ -1,16 +1,12 @@
 import greenfoot.*;
 public class Enemy_1 extends Entity {
-    private Class resetClass;
-    public Enemy_1(Class newWorld) {
-        resetClass = newWorld;
+    private Worlds resetWorld;
+    public Enemy_1(Worlds newWorld) {
+        resetWorld = newWorld;
     }
     public void act() {
-        World resetWorld = null;
         if(isTouching(Player.class)) {
-            if(resetClass == Tutorial.class) {
-                resetWorld = new Tutorial();
-            }
-            Greenfoot.setWorld(resetWorld);
+            resetWorld.reset();
         }
     }
     protected GreenfootImage getDirectionImage(Directions dir) {

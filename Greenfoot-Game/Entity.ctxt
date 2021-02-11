@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Entity
-comment1.params=
-comment1.target=void\ act()
+comment1.params=dir
+comment1.target=greenfoot.GreenfootImage\ getDirectionImage(Directions)
 comment2.params=dir
-comment2.target=greenfoot.GreenfootImage\ getDirectionImage(Directions)
-comment3.params=dir
-comment3.target=void\ move(Directions)
+comment2.target=void\ move(Directions)
+comment3.params=
+comment3.target=boolean\ canAct()
 numComments=4

@@ -1,12 +1,12 @@
 import greenfoot.*;
 public class Goal extends Actor {
-    private World world;
+    private World nextWorld;
     public Goal(World newWorld) {
-        world = newWorld;
+        nextWorld = newWorld;
     }
     public void act() {
-        if(isTouching(Player.class) && world != null) {
-            Greenfoot.setWorld(world);
+        if(isTouching(Player.class) && nextWorld != null) {
+            Greenfoot.setWorld(nextWorld);
         }
     }
 }

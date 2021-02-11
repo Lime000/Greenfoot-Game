@@ -1,15 +1,5 @@
 import greenfoot.*;
-
 public class Tutorial extends Worlds {
-    public Tutorial() {
-        //super(20, 15, 50);
-        Greenfoot.setSpeed(50);
-        setBackground("images/Background.png");
-        prepare();
-    } 
-    public void reset() {
-        prepare();
-    }
     public void prepare() {
         Goal goal = new Goal(new World1());
         addObject(goal,18,8);
@@ -25,9 +15,9 @@ public class Tutorial extends Worlds {
         addObject(wall4,8,7);
         Wall wall5 = new Wall();
         addObject(wall5,8,8);
-        Enemy_1 enemy_1 = new Enemy_1(this);
+        Enemy1 enemy_1 = new Enemy1(this);
         addObject(enemy_1,7,13);
-        Enemy_1 enemy_12 = new Enemy_1(this);
+        Enemy1 enemy_12 = new Enemy1(this);
         addObject(enemy_12,15,3);
     }
 }

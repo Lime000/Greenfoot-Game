@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=Enemy_1
-comment1.params=
-comment1.target=void\ act()
-comment2.params=dir
-comment2.target=greenfoot.GreenfootImage\ getDirectionImage(Directions)
-numComments=3

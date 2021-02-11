@@ -6,7 +6,6 @@ public class Tutorial extends Worlds {
         super();
         System.out.println(anleitung);
     }
-
     public void prepare() {
         Goal goal = new Goal(new World1());
         addObject(goal,18,8);

@@ -1,15 +1,7 @@
 import greenfoot.*;
-
-public class World1 extends World {
-    public World1() {
-        super(20, 15, 50);
-        Greenfoot.setSpeed(50);
-        setBackground("images/Background.png");
-        prepare();
-    } 
-    
-    public void prepare() { 
-        Goal goal = new Goal(new World2());
+public class World1 extends Worlds {
+    public void prepare() {
+        Goal goal = new Goal(null);
         addObject(goal,17,12);
         Player player = new Player();
         addObject(player,1,4);
@@ -17,11 +9,11 @@ public class World1 extends World {
         addObject(wall,10,6);
         Wall wall2 = new Wall();
         addObject(wall2,9,6);
-        Enemy_1 enemy_1 = new Enemy_1();
+        Enemy1 enemy_1 = new Enemy1(this);
         addObject(enemy_1,15,4);
-        Enemy_1 enemy_12 = new Enemy_1();
+        Enemy1 enemy_12 = new Enemy1(this);
         addObject(enemy_12,10,9);
-        Enemy_1 enemy_13 = new Enemy_1();
+        Enemy1 enemy_13 = new Enemy1(this);
         addObject(enemy_13,1,13);
         addObject(wall,11,6);
         addObject(wall2,9,7);

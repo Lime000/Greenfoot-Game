@@ -1,16 +1,16 @@
 import greenfoot.*;
 public class Player extends Entity {
     public void act() {
-        if (Greenfoot.isKeyDown("up")) {
-            this.move(Directions.UP);
+        if (Greenfoot.isKeyDown("w")) {
+            move(Directions.UP);
         }
-        if (Greenfoot.isKeyDown("left")) {
+        if (Greenfoot.isKeyDown("a")) {
             move(Directions.LEFT);
         }
-        if (Greenfoot.isKeyDown("down")) {
+        if (Greenfoot.isKeyDown("s")) {
             move(Directions.DOWN);
         }
-        if (Greenfoot.isKeyDown("right")) {
+        if (Greenfoot.isKeyDown("d")) {
             move(Directions.RIGHT);
         }
     }

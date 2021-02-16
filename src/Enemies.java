@@ -6,7 +6,7 @@ public abstract class Enemies extends Entity {
     }
     public void act() {
         if(isTouching(Player.class)) {
-            resetWorld.reset();
+            Health.removeHeart(1);
         }
     }
 }

@@ -1,12 +1,9 @@
 import greenfoot.*;
 public class Enemy1 extends Enemies {
-    public Enemy1(Worlds newWorld) {
-        super(newWorld);
-    }
     public void act() {
         super.act();
         if(canAct()) {
-            move(Directions.NULL);
+            move(Directions.LEFT);
         }
     }
     protected GreenfootImage getDirectionImage(Directions dir) {

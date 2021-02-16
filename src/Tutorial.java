@@ -1,12 +1,10 @@
 import greenfoot.*;
-
 public class Tutorial extends Worlds {
     private String anleitung = "WIllKOMMEN BEIM TUTORIAL. Hier lernst du dich im  Spiel zu Bewegen und zu agieren. Drücke W und nach oben zu gehen A um nach Links und D um nach Rechts zu gelangen. Mit S gehst du nach unten.";
     public Tutorial() {
         super();
         System.out.println(anleitung);
     }
-
     public void prepare() {
         super.prepare();
         Goal goal = new Goal(new World1());
@@ -23,9 +21,11 @@ public class Tutorial extends Worlds {
         addObject(wall4,8,7);
         Wall wall5 = new Wall(new GreenfootImage("Wall.png"));
         addObject(wall5,8,8);
-        Enemy1 enemy_1 = new Enemy1(this);
+        Enemy1 enemy_1 = new Enemy1();
         addObject(enemy_1,7,13);
-        Enemy1 enemy_12 = new Enemy1(this);
+        Enemy1 enemy_12 = new Enemy1();
         addObject(enemy_12,15,3);
+        Health health = new Health(this);
+        addObject(health, 0, 0);
     }
 }

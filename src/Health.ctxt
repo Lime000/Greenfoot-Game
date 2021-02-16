@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Health
+comment1.params=
+comment1.target=void\ act()
+comment2.params=t
+comment2.target=void\ removeHeart(int)
+numComments=3

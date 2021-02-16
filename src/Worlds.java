@@ -10,5 +10,9 @@ public class Worlds extends World {
         removeObjects(getObjects(null));
         prepare();
     }
-    public void prepare() { }
+    public void prepare() { 
+        for( int i=0; i<20; i++){
+            addObject(new Wall(new GreenfootImage("Wall.png")),i,0);
+        }
+    }
 }

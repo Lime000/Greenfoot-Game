@@ -1,5 +1,6 @@
 import greenfoot.*;
 abstract public class Entity extends Actor {
+    private int healthindex;
     abstract protected GreenfootImage getDirectionImage(Directions dir);
     public void move(Directions dir) {
         int x = getX();
@@ -19,6 +20,18 @@ abstract public class Entity extends Actor {
         if(getOneObjectAtOffset(dx, dy, Solid.class) == null) {
             setLocation(x + dx, y + dy);
         }
+    }
+    public void removeHeart(int t){
+            healthindex = healthindex -1;  
+    }
+    public void addHeart(int t){
+         healthindex = healthindex +1;  
+    }
+     public int getHealthindex(){
+         return healthindex;
+    }
+    public void setHealthindex(int newHealthindex){
+        healthindex = newHealthindex;
     }
     public boolean canAct() {
         return Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("d");

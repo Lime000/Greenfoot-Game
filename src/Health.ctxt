@@ -1,11 +1,7 @@
 #BlueJ class context
 comment0.target=Health
-comment1.params=newWorld
-comment1.target=Health(Worlds)
-comment2.params=
-comment2.target=void\ act()
-comment3.params=amount
-comment3.target=void\ addHeart(int)
-comment4.params=amount
-comment4.target=void\ removeHeart(int)
-numComments=5
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Health\ here.\r\n\ Lebensanzeige\ f\u00FCr\ den\ Protagonisten\r\n\ @Dennjes\ aka\ Hackermann\ \r\n\ @version\ 0.1\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Health\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+numComments=2

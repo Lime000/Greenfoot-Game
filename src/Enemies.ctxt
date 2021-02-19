@@ -1,5 +1,10 @@
 #BlueJ class context
+<<<<<<< HEAD:src/Enemies.ctxt
 comment0.target=Enemies
 comment1.params=
 comment1.target=void\ act()
 numComments=2
+=======
+comment0.target=Solid
+numComments=1
+>>>>>>> 8ebf22f8c2f135885b58a90d5af00f5deeb0b08e:Greenfoot-Game/Solid.ctxt

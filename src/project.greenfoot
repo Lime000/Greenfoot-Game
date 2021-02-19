@@ -3,16 +3,27 @@ class.Door.image=Wall.png
 class.Enemy1.image=Enemy.png
 class.Enemy2.image=Enemy.png
 class.Goal.image=Goal.png
+<<<<<<< HEAD:src/project.greenfoot
 class.Health.image=heart.png
 class.Player.image=Player_UP.png
 class.Wall.image=Wall.png
 class.World1.image=Background.png
 dependency1.from=Worlds
 dependency1.to=Wall
+=======
+class.Health.image=skull.png
+class.Player.image=Player_UP.png
+class.Wall.image=Wall\ 2.0.png
+class.World1.image=Background.png
+class.World2.image=Background.png
+dependency1.from=Tutorial
+dependency1.to=Goal
+>>>>>>> 8ebf22f8c2f135885b58a90d5af00f5deeb0b08e:Greenfoot-Game/project.greenfoot
 dependency1.type=UsesDependency
 dependency10.from=Entity
 dependency10.to=Directions
 dependency10.type=UsesDependency
+<<<<<<< HEAD:src/project.greenfoot
 dependency11.from=Entity
 dependency11.to=Solid
 dependency11.type=UsesDependency
@@ -67,6 +78,53 @@ editor.fx.0.x=-1542
 editor.fx.0.y=-6
 height=881
 package.numDependencies=18
+=======
+dependency11.from=Enemies
+dependency11.to=Worlds
+dependency11.type=UsesDependency
+dependency12.from=Enemies
+dependency12.to=Player
+dependency12.type=UsesDependency
+dependency13.from=Enemy1
+dependency13.to=Worlds
+dependency13.type=UsesDependency
+dependency14.from=Enemy2
+dependency14.to=Worlds
+dependency14.type=UsesDependency
+dependency15.from=Goal
+dependency15.to=Player
+dependency15.type=UsesDependency
+dependency2.from=Tutorial
+dependency2.to=World1
+dependency2.type=UsesDependency
+dependency3.from=Tutorial
+dependency3.to=Player
+dependency3.type=UsesDependency
+dependency4.from=Tutorial
+dependency4.to=Wall
+dependency4.type=UsesDependency
+dependency5.from=Tutorial
+dependency5.to=Enemy1
+dependency5.type=UsesDependency
+dependency6.from=World1
+dependency6.to=Goal
+dependency6.type=UsesDependency
+dependency7.from=World1
+dependency7.to=Player
+dependency7.type=UsesDependency
+dependency8.from=World1
+dependency8.to=Wall
+dependency8.type=UsesDependency
+dependency9.from=World1
+dependency9.to=Enemy1
+dependency9.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=232
+editor.fx.0.y=82
+height=935
+package.numDependencies=15
+>>>>>>> 8ebf22f8c2f135885b58a90d5af00f5deeb0b08e:Greenfoot-Game/project.greenfoot
 package.numTargets=14
 project.charset=UTF-8
 publish.hasSource=false
@@ -162,12 +220,20 @@ target6.y=0
 target7.height=50
 target7.name=Directions
 target7.showInterface=false
+<<<<<<< HEAD:src/project.greenfoot
 target7.type=EnumTarget
+=======
+target7.type=ClassTarget
+>>>>>>> 8ebf22f8c2f135885b58a90d5af00f5deeb0b08e:Greenfoot-Game/project.greenfoot
 target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
+<<<<<<< HEAD:src/project.greenfoot
 target8.name=Worlds
+=======
+target8.name=World2
+>>>>>>> 8ebf22f8c2f135885b58a90d5af00f5deeb0b08e:Greenfoot-Game/project.greenfoot
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=80
@@ -181,7 +247,14 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD:src/project.greenfoot
 width=1278
 world.lastInstantiated=Tutorial
 xPosition=0
 yPosition=0
+=======
+width=1296
+world.lastInstantiated=World1
+xPosition=0
+yPosition=1
+>>>>>>> 8ebf22f8c2f135885b58a90d5af00f5deeb0b08e:Greenfoot-Game/project.greenfoot

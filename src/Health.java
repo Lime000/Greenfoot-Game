@@ -1,21 +1,23 @@
-import greenfoot.*; 
-public class Health extends Actor {
-    private static int health = 3;
-    private Worlds resetWorld;
-    public Health(Worlds newWorld) {
-        resetWorld = newWorld;
-    }
-    public void act(){
-        if(health <= 0) {
-            resetWorld.reset();
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+/**
+ * Write a description of class Health here.
+ * Lebensanzeige für den Protagonisten
+ * @Dennjes aka Hackermann 
+ * @version 0.1
+ */
+public class Health extends Actor
+
+{
+    int heart;
+    /**
+     * Act - do whatever the Health wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        if (heart == 0) {
+            
         }
-    } 
-    public static void addHeart(int amount){
-        health += amount;
-        System.out.println(health);
-    }
-    public static void removeHeart(int amount){
-        health -= amount;
-        System.out.println(health);
-    }
+    }    
 }

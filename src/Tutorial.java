@@ -9,7 +9,7 @@ public class Tutorial extends Worlds {
         super.prepare();
         Goal goal = new Goal(new World1());
         addObject(goal,18,8);
-        Player player = new Player();
+        Player player = new Player(this);
         addObject(player,2,2);
         Wall wall = new Wall(new GreenfootImage("Wall.png"));
         addObject(wall,8,4);

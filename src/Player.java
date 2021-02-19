@@ -1,12 +1,17 @@
 import greenfoot.*;
 public class Player extends Entity {
-
-    public Player(){
-        setHealthindex(5);
+    private Worlds resetWorld;
+    public Player(Worlds newWorld) {
+        setHearts(5);
+        resetWorld = newWorld;
     }
     public void act() {
-        World test = getWorld();
-        System.out.println(getHealthindex());
+        if(isTouching(Enemies.class)) {
+            removeHeart(1);
+        }
+        updateStatus(getHearts());
+        World world = getWorld();
+        world.showText(String.valueOf(getHearts()), 0, 0);
         if (Greenfoot.isKeyDown("w")) {
             move(Directions.UP);
         }
@@ -19,6 +24,9 @@ public class Player extends Entity {
         if (Greenfoot.isKeyDown("d")) {
             move(Directions.RIGHT);
         }
+    }
+    public void updateStatus(int hearts) {
+        
     }
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {

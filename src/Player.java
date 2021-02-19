@@ -1,6 +1,6 @@
 import greenfoot.*;
 public class Player extends Entity {
-    
+
     public Player(){
         setHealthindex(5);
     }

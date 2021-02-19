@@ -3,12 +3,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 public class Enemy2 extends Enemies {
     Queue<Directions> nextMoves = new LinkedList();
-    public Enemy2(Worlds newWorld) {
-        super(newWorld);
-    }
     public void act() {
         super.act();
-        
     }
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {

@@ -1,6 +1,12 @@
 import greenfoot.*;
 public class Player extends Entity {
+
+    public Player(){
+        setHealthindex(5);
+    }
     public void act() {
+        World test = getWorld();
+        System.out.println(getHealthindex());
         if (Greenfoot.isKeyDown("w")) {
             move(Directions.UP);
         }

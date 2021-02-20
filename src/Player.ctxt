@@ -1,9 +1,11 @@
 #BlueJ class context
 comment0.target=Player
-comment1.params=
-comment1.target=Player()
+comment1.params=newWorld
+comment1.target=Player(Worlds)
 comment2.params=
 comment2.target=void\ act()
-comment3.params=dir
-comment3.target=greenfoot.GreenfootImage\ getDirectionImage(Directions)
-numComments=4
+comment3.params=hearts
+comment3.target=void\ updateStatus(int)
+comment4.params=dir
+comment4.target=greenfoot.GreenfootImage\ getDirectionImage(Directions)
+numComments=5

@@ -1,6 +1,6 @@
 import greenfoot.*;
 abstract public class Entity extends Actor {
-    private int healthindex;
+    private int hearts;
     abstract protected GreenfootImage getDirectionImage(Directions dir);
     public void move(Directions dir) {
         int x = getX();
@@ -22,16 +22,16 @@ abstract public class Entity extends Actor {
         }
     }
     public void removeHeart(int t){
-            healthindex = healthindex -1;  
+        hearts -= t;
     }
     public void addHeart(int t){
-         healthindex = healthindex +1;  
+        hearts += t;
     }
-     public int getHealthindex(){
-         return healthindex;
+    public int getHearts(){
+        return hearts;
     }
-    public void setHealthindex(int newHealthindex){
-        healthindex = newHealthindex;
+    public void setHearts(int newHearts){
+        hearts = newHearts;
     }
     public boolean canAct() {
         return Greenfoot.isKeyDown("w") || Greenfoot.isKeyDown("a") || Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("d");

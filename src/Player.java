@@ -6,6 +6,9 @@ public class Player extends Entity {
         resetWorld = newWorld;
     }
     public void act() {
+        if(Greenfoot.isKeyDown("e")&&isTouching(Item.class)){
+            takeItem();
+        }
         if(isTouching(Enemies.class)) {
             removeHeart(1);
         }
@@ -36,6 +39,9 @@ public class Player extends Entity {
         for(int i = 0; i < hearts ; i++ ){
             getWorld().addObject(new Heart(), i, 0);
         }
+        
+    }
+    public void takeItem(){
         
     }
     protected GreenfootImage getDirectionImage(Directions dir) {

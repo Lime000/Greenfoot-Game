@@ -11,8 +11,12 @@ public class Tutorial extends Worlds {
         addObject(goal,18,8);
         Player player = new Player(this);
         addObject(player,2,2);
+        Door door = new Door();
+        addObject(door,16,8);
+        Button button = new Button(door);
+        addObject(button,14,8);
         Wall wall = new Wall(new GreenfootImage("Wall.png"));
-        addObject(wall,8,4);
+        addObject(wall,8,4); 
         Wall wall2 = new Wall(new GreenfootImage("Wall.png"));
         addObject(wall2,8,5);
         Wall wall3 = new Wall(new GreenfootImage("Wall.png"));

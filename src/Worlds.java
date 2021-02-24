@@ -11,7 +11,7 @@ public class Worlds extends World {
         prepare();
     }
     public void prepare() { 
-        for( int i=0; i<20; i++){
+        for( int i=0; i<20; i++) {
             addObject(new Wall(new GreenfootImage("statusleiste.png")),i,0);
         }
     }

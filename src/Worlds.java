@@ -8,7 +8,6 @@ public class Worlds extends World {
     }
     public void reset() {
         removeObjects(getObjects(null));
-        Health.addHeart(3);
         prepare();
     }
     public void prepare() { 

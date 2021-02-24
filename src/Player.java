@@ -6,9 +6,6 @@ public class Player extends Entity {
         resetWorld = newWorld;
     }
     public void act() {
-        if(isTouching(Enemies.class)) {
-            removeHeart(1);
-        }
         updateStatus(getHearts());
         World world = getWorld();
         world.showText(String.valueOf(getHearts()), 0, 0);
@@ -26,7 +23,7 @@ public class Player extends Entity {
         }
     }
     public void updateStatus(int hearts) {
-        
+
     }
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {

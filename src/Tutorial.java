@@ -29,5 +29,7 @@ public class Tutorial extends Worlds {
         addObject(enemy_1,7,13);
         Enemy1 enemy_12 = new Enemy1();
         addObject(enemy_12,15,3);
+        Sword sword = new Sword();
+        addObject(sword,4,8);
     }
 }

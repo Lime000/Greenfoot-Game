@@ -1,12 +1,9 @@
 import greenfoot.*;
 public class Tutorial extends Worlds {
     private String anleitung = "WIllKOMMEN BEIM TUTORIAL. Hier lernst du dich im  Spiel zu Bewegen und zu agieren. Drücke W und nach oben zu gehen A um nach Links und D um nach Rechts zu gelangen. Mit S gehst du nach unten.";
-    public Tutorial() {
-        super();
-        System.out.println(anleitung);
-    }
     public void prepare() {
         super.prepare();
+        System.out.println(anleitung);
         Goal goal = new Goal(new World1());
         addObject(goal,18,8);
         Player player = new Player(this);

@@ -1,9 +1,21 @@
 import greenfoot.*;
+import java.util.List; 
 public class Enemy1 extends Enemies {
     public void act() {
         super.act();
         if(canAct()) {
-            move(Directions.LEFT);
+            List list = getObjectsInRange(20, Player.class);
+            Player player = (Player) list.get(0); 
+            System.out.println( player.getX());
+            int x = player.getX();
+            int y = player.getY();
+            if (getX()>x){
+                move(Directions.LEFT);
+            }
+            else {
+                move(Directions.RIGHT);
+            }
+            
         }
     }
     protected GreenfootImage getDirectionImage(Directions dir) {

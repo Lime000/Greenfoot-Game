@@ -1,6 +1,7 @@
 import greenfoot.*;
 public class Player extends Entity {
     private Worlds resetWorld;
+    private Item item;
     public Player(Worlds newWorld) {
         setHearts(5);
         resetWorld = newWorld;

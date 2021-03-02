@@ -7,18 +7,21 @@ public class Player extends Entity {
         resetWorld = newWorld;
     }
     public void act() {
-        if(Greenfoot.isKeyDown("e")&&isTouching(Item.class)){
-            takeItem();
-        }
-        if(isTouching(Enemies.class)) {
-            removeHeart(1);
-        }
         if (getHearts() == 0){
             resetWorld.reset();
         }
         updateStatus(getHearts());
         World world = getWorld();
         world.showText(String.valueOf(getHearts()), 0, 0);
+        if(isTouching(Enemies.class)) {
+            removeHeart(1);
+        }
+        if(Greenfoot.isKeyDown("e") && isTouching(Item.class)) {
+            takeItem();
+        }
+        if(Greenfoot.isKeyDown("space") && item != null) {
+            item.useItem(this);
+        }
         if (Greenfoot.isKeyDown("w")) {
             move(Directions.UP);
         }
@@ -40,10 +43,13 @@ public class Player extends Entity {
         for(int i = 0; i < hearts ; i++ ){
             getWorld().addObject(new Heart(), i, 0);
         }
-        
     }
-    public void takeItem(){
-        
+    public void takeItem() {
+        if(item != null) {
+            item.getWorld().removeObject(item);
+        }
+        item = (Item) getOneIntersectingObject(Item.class);
+        item.setLocation(6, 0);
     }
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {

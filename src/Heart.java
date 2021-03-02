@@ -1,7 +1,7 @@
 import greenfoot.*; 
-public class Heart extends Actor
-{
-    public void act(){
-        
-    } 
+public class Heart extends Item {
+    public void useItem(Player player) {
+        player.addHeart(1);
+        getWorld().removeObject(this);
+    }
 }

@@ -4,18 +4,24 @@ public class Enemy1 extends Enemies {
     public void act() {
         super.act();
         if(canAct()) {
-            List list = getObjectsInRange(20, Player.class);
-            Player player = (Player) list.get(0); 
-            System.out.println( player.getX());
-            int x = player.getX();
-            int y = player.getY();
-            if (getX()>x){
-                move(Directions.LEFT);
+            List list = getObjectsInRange(5, Player.class); 
+            if (!list.isEmpty()){
+                Player player = (Player) list.get(0);
+                int x = player.getX();
+                int y = player.getY();
+                if(getX() == x && getY() == y)
+                {}
+                if (getX() > x){
+                    move(Directions.LEFT);
+                } else {
+                    move(Directions.RIGHT);
+                }
+                if(getY() > y){
+                    move(Directions.UP);
+                } else {
+                    move(Directions.DOWN);
+                }
             }
-            else {
-                move(Directions.RIGHT);
-            }
-            
         }
     }
     protected GreenfootImage getDirectionImage(Directions dir) {

@@ -1,9 +1,16 @@
 import greenfoot.*;
 public class Tutorial extends Worlds {
-    private String anleitung = "WIllKOMMEN BEIM TUTORIAL. Hier lernst du dich im  Spiel zu Bewegen und zu agieren. Drücke W und nach oben zu gehen A um nach Links und D um nach Rechts zu gelangen. Mit S gehst du nach unten.";
+    private String anleitung = "WIllKOMMEN BEIM TUTORIAL. Hier lernst du dich im  Spiel zu Bewegen und zu agieren. ";
+    private String anleitung2 = "Drücke W um nach oben zu gehen, A um nach Links und D um nach Rechts zu gelangen. ";
+    private String anleitung3 = "Mit S gehst du nach unten.";
     public Tutorial() {
         super();
-        System.out.println(anleitung);
+        showText(anleitung,10, 10);
+        showText(anleitung2,10, 11);
+        showText(anleitung3,10, 12);
+        if(Player.move()){
+              anleitung = "Nimm das Schwert indem du auf das Feld mit dem Symbol gehst und E drückst.";
+        }
     }
     public void prepare() {
         super.prepare();
@@ -27,5 +34,6 @@ public class Tutorial extends Worlds {
         addObject(enemy_12,15,3);
         Sword sword = new Sword();
         addObject(sword,4,8);
+        
     }
 }

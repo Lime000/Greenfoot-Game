@@ -1,4 +1,5 @@
 import greenfoot.*;
+import java.util.List;
 public class Player extends Entity {
     private Worlds resetWorld;
     private Item item;
@@ -36,11 +37,11 @@ public class Player extends Entity {
         }
     }
     public void updateStatus(int hearts) {
-        for(int i = 0; i < 5 ; i++ ){
+        for(int i = 0; i < 5; i++){
             World world = getWorld();
             world.removeObjects(world.getObjectsAt(i, 0, Heart.class));
         }
-        for(int i = 0; i < hearts ; i++ ){
+        for(int i = 0; i < hearts; i++){
             getWorld().addObject(new Heart(), i, 0);
         }
     }
@@ -50,6 +51,13 @@ public class Player extends Entity {
         }
         item = (Item) getOneIntersectingObject(Item.class);
         item.setLocation(6, 0);
+    }
+    public void attack(int damage, int range) {
+        List enemies = getNeighbours(range, false, Enemies.class);
+        for(int i = 0; i < enemies.size(); i++) {
+            Enemies enemy = (Enemies) enemies.get(i);
+            enemy.removeHeart(damage);
+        }
     }
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {

@@ -1,5 +1,9 @@
 #BlueJ class context
 comment0.target=Wall
-comment1.params=img
+comment1.params=Image
 comment1.target=Wall(greenfoot.GreenfootImage)
-numComments=2
+comment2.params=
+comment2.target=void\ GreenfootImage()
+comment3.params=
+comment3.target=void\ act()
+numComments=4

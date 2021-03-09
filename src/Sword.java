@@ -1,6 +1,14 @@
 import greenfoot.*;
 public class Sword extends Item {
+    private int durability = 4;
     public void useItem(Player player) {
-        player.attack(1, 1);
+        super.useItem(player);
+        durability --;
+        if(durability == 0) {
+            removeItem();
+        } else {
+            getWorld().showText(String.valueOf(durability), 6, 0);
+            player.attack(1, 1);
+        }
     }
 }

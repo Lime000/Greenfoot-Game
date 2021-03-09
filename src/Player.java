@@ -17,7 +17,7 @@ public class Player extends Entity {
         if(isTouching(Enemies.class)) {
             removeHeart(1);
         }
-        if(Greenfoot.isKeyDown("e") && isTouching(Item.class)) {
+        if(canTakeItem()) {
             takeItem();
         }
         if(Greenfoot.isKeyDown("space") && item != null) {
@@ -58,6 +58,12 @@ public class Player extends Entity {
             Enemies enemy = (Enemies) enemies.get(i);
             enemy.removeHeart(damage);
         }
+    }
+    public boolean canTakeItem() {
+        return Greenfoot.isKeyDown("e") && isTouching(Item.class);
+    }
+    public void removeItem() {
+        item = null;
     }
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {

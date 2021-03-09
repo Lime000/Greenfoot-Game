@@ -27,13 +27,20 @@ dependency14.from=Player
 dependency14.to=Worlds
 dependency14.type=UsesDependency
 dependency15.from=Player
-dependency15.to=Item
+dependency15.to=Heart
 dependency15.type=UsesDependency
 dependency16.from=Player
+<<<<<<< HEAD
 dependency16.to=Heart
 dependency16.type=UsesDependency
 dependency17.from=Player
 dependency17.to=Directions
+=======
+dependency16.to=Directions
+dependency16.type=UsesDependency
+dependency17.from=Player
+dependency17.to=Item
+>>>>>>> b5411f24be308a43610ac59d1842a97451b814cb
 dependency17.type=UsesDependency
 dependency18.from=Player
 dependency18.to=Enemies
@@ -80,11 +87,19 @@ dependency8.type=UsesDependency
 dependency9.from=Tutorial
 dependency9.to=Sword
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=974
 editor.fx.0.y=214
 height=28
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+height=1000
+>>>>>>> b5411f24be308a43610ac59d1842a97451b814cb
 package.numDependencies=24
 package.numTargets=17
 project.charset=UTF-8
@@ -221,7 +236,11 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=160
+=======
+width=1296
+>>>>>>> b5411f24be308a43610ac59d1842a97451b814cb
 world.lastInstantiated=Tutorial
 xPosition=0
 yPosition=0

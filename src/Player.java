@@ -3,19 +3,19 @@ import java.util.List;
 public class Player extends Entity {
     private Worlds resetWorld;
     private Item item;
+    private boolean actOnce = false;
     public Player(Worlds newWorld) {
         setHearts(5);
         resetWorld = newWorld;
     }
     public void act() {
-        if (getHearts() == 0){
-            resetWorld.reset();
+        if(!actOnce) {
+            updateStatus(getHearts());
+            actOnce = true;
         }
-        updateStatus(getHearts());
-        World world = getWorld();
-        world.showText(String.valueOf(getHearts()), 0, 0);
         if(isTouching(Enemies.class)) {
             removeHeart(1);
+            updateStatus(getHearts());
         }
         if(canTakeItem()) {
             takeItem();
@@ -37,12 +37,16 @@ public class Player extends Entity {
         }
     }
     public void updateStatus(int hearts) {
-        for(int i = 0; i < 5; i++){
-            World world = getWorld();
+        getWorld().showText(String.valueOf(hearts), 0, 0);
+        World world = getWorld();
+        for(int i = 0; i < 5; i++) {
             world.removeObjects(world.getObjectsAt(i, 0, Heart.class));
         }
-        for(int i = 0; i < hearts; i++){
-            getWorld().addObject(new Heart(), i, 0);
+        for(int i = 0; i < hearts; i++) {
+            world.addObject(new Heart(), i, 0);
+        }
+        if (getHearts() == 0) {
+            resetWorld.reset();
         }
     }
     public void takeItem() {
@@ -51,6 +55,7 @@ public class Player extends Entity {
         }
         item = (Item) getOneIntersectingObject(Item.class);
         item.setLocation(6, 0);
+        System.out.println("Item");
     }
     public void attack(int damage, int range) {
         List enemies = getNeighbours(range, false, Enemies.class);

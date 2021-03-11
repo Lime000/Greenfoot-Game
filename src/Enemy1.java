@@ -1,6 +1,9 @@
 import greenfoot.*;
 import java.util.List; 
 public class Enemy1 extends Enemies {
+    public Enemy1() {
+        setHearts(2);
+    }
     public void act() {
         super.act();
         if(canAct()) {

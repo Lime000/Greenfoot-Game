@@ -1,8 +1,17 @@
-import greenfoot.*;  
-public class Item extends Actor
-{
-    public void act() 
-    {
-      
-    }    
+import greenfoot.*;
+public class Item extends Actor {
+    Player player;
+    private boolean usedOnce = false;
+    public void useItem(Player newPlayer) {
+        if(!usedOnce) {
+            usedOnce = true;
+            player = newPlayer;
+        }
+    }
+    public void removeItem() {
+        World world = getWorld();
+        player.removeItem();
+        world.removeObject(this);
+        world.showText("", 6, 0);
+    }
 }

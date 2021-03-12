@@ -1,9 +1,30 @@
 import greenfoot.*;
+import java.util.List; 
 public class Enemy1 extends Enemies {
+    public Enemy1() {
+        setHearts(2);
+    }
     public void act() {
         super.act();
         if(canAct()) {
-            move(Directions.LEFT);
+            List list = getObjectsInRange(5, Player.class); 
+            if (!list.isEmpty()){
+                Player player = (Player) list.get(0);
+                int x = player.getX();
+                int y = player.getY();
+                if(getX() == x && getY() == y)
+                {}
+                if (getX() > x){
+                    move(Directions.LEFT);
+                } else {
+                    move(Directions.RIGHT);
+                }
+                if(getY() > y){
+                    move(Directions.UP);
+                } else {
+                    move(Directions.DOWN);
+                }
+            }
         }
     }
     protected GreenfootImage getDirectionImage(Directions dir) {

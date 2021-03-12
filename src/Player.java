@@ -1,24 +1,28 @@
 import greenfoot.*;
+import java.util.List;
 public class Player extends Entity {
     private Worlds resetWorld;
     private Item item;
+    private boolean actOnce = false;
     public Player(Worlds newWorld) {
         setHearts(5);
         resetWorld = newWorld;
     }
     public void act() {
-        if(Greenfoot.isKeyDown("e")&&isTouching(Item.class)){
-            takeItem();
+        if(!actOnce) {
+            updateStatus(getHearts());
+            actOnce = true;
         }
         if(isTouching(Enemies.class)) {
             removeHeart(1);
+            updateStatus(getHearts());
         }
-        if (getHearts() == 0){
-            resetWorld.reset();
+        if(canTakeItem()) {
+            takeItem();
         }
-        updateStatus(getHearts());
-        World world = getWorld();
-        world.showText(String.valueOf(getHearts()), 0, 0);
+        if(Greenfoot.isKeyDown("space") && item != null) {
+            item.useItem(this);
+        }
         if (Greenfoot.isKeyDown("w")) {
             move(Directions.UP);
         }
@@ -33,17 +37,38 @@ public class Player extends Entity {
         }
     }
     public void updateStatus(int hearts) {
-        for(int i = 0; i < 5 ; i++ ){
-            World world = getWorld();
+        getWorld().showText(String.valueOf(hearts), 0, 0);
+        World world = getWorld();
+        for(int i = 0; i < 5; i++) {
             world.removeObjects(world.getObjectsAt(i, 0, Heart.class));
         }
-        for(int i = 0; i < hearts ; i++ ){
-            getWorld().addObject(new Heart(), i, 0);
+        for(int i = 0; i < hearts; i++) {
+            world.addObject(new Heart(), i, 0);
         }
-        
+        if (getHearts() == 0) {
+            resetWorld.reset();
+        }
     }
-    public void takeItem(){
-        
+    public void takeItem() {
+        if(item != null) {
+            item.getWorld().removeObject(item);
+        }
+        item = (Item) getOneIntersectingObject(Item.class);
+        item.setLocation(6, 0);
+        System.out.println("Item");
+    }
+    public void attack(int damage, int range) {
+        List enemies = getNeighbours(range, false, Enemies.class);
+        for(int i = 0; i < enemies.size(); i++) {
+            Enemies enemy = (Enemies) enemies.get(i);
+            enemy.removeHeart(damage);
+        }
+    }
+    public boolean canTakeItem() {
+        return Greenfoot.isKeyDown("e") && isTouching(Item.class);
+    }
+    public void removeItem() {
+        item = null;
     }
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {

@@ -4,6 +4,7 @@ public class Worlds extends World {
         super(20, 15, 50);
         Greenfoot.setSpeed(30);
         setBackground("images/Background.png");
+        setActOrder(Player.class);
         prepare();
     }
     public void reset() {

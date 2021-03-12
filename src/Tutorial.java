@@ -1,10 +1,5 @@
 import greenfoot.*;
 public class Tutorial extends Worlds {
-<<<<<<< HEAD
-    
-    private String anleitung ="WIllKOMMEN BEIM TUTORIAL!. Hier lernst du, dich im Spiel zu bewegen und zu agieren. Drücke W, um nach oben zu gehen, A, um nach Links, D, um nach Rechts, und S, um dich nach unten zu bewegen.";
-
-=======
     private String anleitung = "WIllKOMMEN BEIM TUTORIAL. Hier lernst du dich im  Spiel zu Bewegen und zu agieren. ";
     private String anleitung2 = "Drücke W um nach oben zu gehen, A um nach Links und D um nach Rechts zu gelangen. ";
     private String anleitung3 = "Mit S gehst du nach unten.";
@@ -29,7 +24,6 @@ public class Tutorial extends Worlds {
             showText("Besiege nun alle Gegner! Und gehe danach zu Goal, um in die nächste Welt zu gelangen.", 10, 12);
         }
     }
->>>>>>> 9e3d639ace706e7008f8bccb8d76aa493ac7e9ad
     public void prepare() {
         super.prepare();
         Goal goal = new Goal(new World1());
@@ -40,7 +34,7 @@ public class Tutorial extends Worlds {
         addObject(door,16,8);
         Button button = new Button(door);
         addObject(button,14,8);
-        Wall wall = new Wall(new GreenfootImage("Wall.png"));
+        Wall wall = new Wall(new GreenfootImage("WallRusty.png"));
         addObject(wall,8,4);
         Wall wall2 = new Wall(new GreenfootImage("Wall.png"));
         addObject(wall2,8,5);
@@ -52,6 +46,10 @@ public class Tutorial extends Worlds {
         addObject(wall5,8,8);
         Wall wall6 = new Wall(new GreenfootImage("Wall.png"));
         addObject(wall6,8,9);
+        Wall wall7 = new Wall(new GreenfootImage("WallRusty.png"));
+        addObject(wall7,16,7);
+        Wall wall8 = new Wall(new GreenfootImage("WallRusty.png"));
+        addObject(wall8,16,9);
         Enemy1 enemy_1 = new Enemy1();
         addObject(enemy_1,7,13);
         Enemy1 enemy_12 = new Enemy1();

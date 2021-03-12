@@ -22,9 +22,9 @@ public class World1 extends Worlds {
         addObject(wall4,8,7);
         Wall wall5 = new Wall(new GreenfootImage("Wall.png"));
         addObject(wall5,9,8);
-        Wall wall6 = new Wall(new GreenfootImage("Wall 2.0.png"));
+        Wall wall6 = new Wall(new GreenfootImage("WallRusty.png"));
         addObject(wall6,10,8);
-        Wall walls = new Wall(new GreenfootImage("Wall 2.0.png"));
+        Wall walls = new Wall(new GreenfootImage("WallRusty.png"));
         Enemy1 enemy2 = new Enemy1();
         addObject(enemy2,7,13);
         Enemy1 enemy3 = new Enemy1();

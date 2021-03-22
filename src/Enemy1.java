@@ -1,5 +1,5 @@
 import greenfoot.*;
-import java.util.List; 
+import java.util.List;
 public class Enemy1 extends Enemies {
     public Enemy1() {
         setHearts(2);
@@ -7,21 +7,21 @@ public class Enemy1 extends Enemies {
     public void act() {
         super.act();
         if(canAct()) {
-            List list = getObjectsInRange(5, Player.class); 
-            if (!list.isEmpty()){
-                Player player = (Player) list.get(0);
-                int x = player.getX();
-                int y = player.getY();
-                if(getX() == x && getY() == y)
-                {}
-                if (getX() > x){
+            List objectsInRange = getObjectsInRange(5, Player.class); //überprüfen, ob der Spieler in Reichweite ist
+            if (!objectsInRange.isEmpty()) {
+                Player player = (Player) objectsInRange.get(0);
+                int playerX = player.getX(); //Die Position des Spielers ermitteln.
+                int playerY = player.getY();
+                int ownX = getX(); //Die eigene Position finden
+                int ownY = getY();
+                if (ownX > playerX){
                     move(Directions.LEFT);
-                } else {
+                } else if(ownX < playerX){
                     move(Directions.RIGHT);
                 }
-                if(getY() > y){
+                if(ownY > playerY){
                     move(Directions.UP);
-                } else {
+                } else if (ownY < playerY) {
                     move(Directions.DOWN);
                 }
             }

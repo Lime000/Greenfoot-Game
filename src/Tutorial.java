@@ -11,7 +11,7 @@ public class Tutorial extends Worlds {
         showText(anleitung2, 10, 11);
         showText(anleitung3, 10, 12);
     }
-    public void act(){
+    public void act() {
         if(player.canAct() && !alreadyShown){
             showText("Nimm das Schwert indem du auf das Feld mit dem Symbol gehst und E drückst.", 10, 10);
             showText("",10,11);

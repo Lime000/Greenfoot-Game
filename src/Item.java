@@ -1,6 +1,6 @@
 import greenfoot.*;
 public class Item extends Actor {
-    Player player;
+    private Player player;
     private boolean usedOnce = false;
     public void useItem(Player newPlayer) {
         if(!usedOnce) {

@@ -4,7 +4,7 @@ public abstract class Enemies extends Entity {
         if(isTouching(Player.class)) {
             removeHeart(1);
         }
-        if (getHearts() == 0) {
+        if (getHearts() <= 0) {
             getWorld().removeObject(this);
         }
     }

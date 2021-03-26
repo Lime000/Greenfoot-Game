@@ -2,7 +2,12 @@ import greenfoot.*;
 public class World1 extends Worlds {
     public void prepare() {
         super.prepare();
+<<<<<<< HEAD
         //PLAYER
+=======
+        Goal goal = new Goal(new World2());
+        addObject(goal,17,12);
+>>>>>>> 80826bf9b96310c9d5bb434dba23194d0f79f614
         Player player = new Player(this);
         addObject(player,2,2);
      
@@ -57,5 +62,8 @@ public class World1 extends Worlds {
         //ITEMS
         Sword sword = new Sword();
         addObject(sword,4,8);
+    }
+    public void act(){
+
     }
 }

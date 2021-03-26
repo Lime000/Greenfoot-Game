@@ -55,7 +55,6 @@ public class Player extends Entity {
         }
         item = (Item) getOneIntersectingObject(Item.class);
         item.setLocation(6, 0);
-        System.out.println("Item");
     }
     public void attack(int damage, int range) {
         List enemies = getNeighbours(range, false, Enemies.class);

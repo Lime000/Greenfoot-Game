@@ -15,7 +15,7 @@ public class Tutorial extends Worlds {
             showText("",10,12);
             alreadyShown = true;
         }
-        if(Greenfoot.isKeyDown("e")) { //  player.canTakeItem()
+        if(Greenfoot.isKeyDown("e")) {
             showText("Um nun einen Gegner anzugreifen gehe in seine Nähe.", 10, 10);
             showText("Stehst du ein Feld von ihm entfernt, drücke Leertaste um ihn anzugreifen.", 10, 11);
             showText("Besiege nun alle Gegner! Und gehe danach zu Goal, um in die nächste Welt zu gelangen.", 10, 12);
@@ -31,21 +31,21 @@ public class Tutorial extends Worlds {
         addObject(door,16,8);
         Button button = new Button(door);
         addObject(button,14,8);
-        Wall wall = new Wall(new GreenfootImage("WallRusty.png"));
+        Wall wall = new Wall();
         addObject(wall,8,4);
-        Wall wall2 = new Wall(new GreenfootImage("Wall.png"));
+        Wall wall2 = new Wall();
         addObject(wall2,8,5);
-        Wall wall3 = new Wall(new GreenfootImage("Wall.png"));
+        Wall wall3 = new Wall();
         addObject(wall3,8,6);
-        Wall wall4 = new Wall(new GreenfootImage("Wall.png"));
+        Wall wall4 = new Wall();
         addObject(wall4,8,7);
-        Wall wall5 = new Wall(new GreenfootImage("Wall.png"));
+        Wall wall5 = new Wall();
         addObject(wall5,8,8);
-        Wall wall6 = new Wall(new GreenfootImage("Wall.png"));
+        Wall wall6 = new Wall();
         addObject(wall6,8,9);
-        Wall wall7 = new Wall(new GreenfootImage("WallRusty.png"));
+        Wall wall7 = new Wall();
         addObject(wall7,16,7);
-        Wall wall8 = new Wall(new GreenfootImage("WallRusty.png"));
+        Wall wall8 = new Wall();
         addObject(wall8,16,9);
         Enemy1 enemy_1 = new Enemy1();
         addObject(enemy_1,7,13);

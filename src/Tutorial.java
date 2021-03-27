@@ -31,7 +31,7 @@ public class Tutorial extends Worlds {
         addObject(door,16,8);
         Button button = new Button(door);
         addObject(button,14,8);
-        Wall wall = new Wall(new GreenfootImage("Wall.png"));
+        Wall wall = new Wall(new GreenfootImage("WallRusty.png"));
         addObject(wall,8,4);
         Wall wall2 = new Wall(new GreenfootImage("Wall.png"));
         addObject(wall2,8,5);
@@ -43,6 +43,10 @@ public class Tutorial extends Worlds {
         addObject(wall5,8,8);
         Wall wall6 = new Wall(new GreenfootImage("Wall.png"));
         addObject(wall6,8,9);
+        Wall wall7 = new Wall(new GreenfootImage("WallRusty.png"));
+        addObject(wall7,16,7);
+        Wall wall8 = new Wall(new GreenfootImage("WallRusty.png"));
+        addObject(wall8,16,9);
         Enemy1 enemy_1 = new Enemy1();
         addObject(enemy_1,7,13);
         Enemy1 enemy_12 = new Enemy1();

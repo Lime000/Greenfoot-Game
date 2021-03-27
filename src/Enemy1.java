@@ -30,15 +30,15 @@ public class Enemy1 extends Enemies {
     protected GreenfootImage getDirectionImage(Directions dir) {
         switch (dir) {
             case UP:
-                return new GreenfootImage("EnemyBack.png");
+                return new GreenfootImage("Enemy_UP.png");
             case RIGHT:
-                return new GreenfootImage("EnemyRight.png");
+                return new GreenfootImage("Enemy_RIGHT.png");
             case DOWN:
-                return new GreenfootImage("EnemyFront.png");
+                return new GreenfootImage("Enemy_DOWN.png");
             case LEFT:
-                return new GreenfootImage("EnemyLeft.png");
+                return new GreenfootImage("Enemy_LEFT.png");
             default:
-                return new GreenfootImage("EnemyFront.png");
+                return new GreenfootImage("Enemy_DOWN.png");
         }
     }
 }

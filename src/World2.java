@@ -25,7 +25,5 @@ public class World2 extends Worlds
         addObject(door,16,8);
         Button button = new Button(door);
         addObject(button,10,14);
- 
     }
-    
 }

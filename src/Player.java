@@ -37,8 +37,8 @@ public class Player extends Entity {
         }
     }
     public void updateStatus(int hearts) {
-        getWorld().showText(String.valueOf(hearts), 0, 0);
         World world = getWorld();
+        world.showText(String.valueOf(hearts), 0, 0);
         for(int i = 0; i < 5; i++) {
             world.removeObjects(world.getObjectsAt(i, 0, Heart.class));
         }

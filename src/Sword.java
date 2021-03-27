@@ -4,8 +4,9 @@ public class Sword extends Item {
     public void useItem(Player player) {
         super.useItem(player);
         durability --;
-        if(durability == 0) {
+        if(durability <= 0) {
             removeItem();
+            getWorld().showText("", 6, 0);
         } else {
             getWorld().showText(String.valueOf(durability), 6, 0);
             player.attack(1, 1);

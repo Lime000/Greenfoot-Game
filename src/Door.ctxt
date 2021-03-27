@@ -2,4 +2,8 @@
 comment0.target=Door
 comment1.params=
 comment1.target=void\ open()
-numComments=2
+comment2.params=door
+comment2.target=void\ update(Solid)
+comment3.params=
+comment3.target=void\ setImage()
+numComments=4

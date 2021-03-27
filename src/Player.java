@@ -1,6 +1,7 @@
 import greenfoot.*;
 import java.util.List;
 public class Player extends Entity {
+    //Dei Spieler verwaltet sein eigenes Leben, seine Items und seine ResetWorld (Welt nach dem Tod).
     private Worlds resetWorld;
     private Item item;
     private boolean actOnce = false;
@@ -10,20 +11,20 @@ public class Player extends Entity {
     }
     public void act() {
         if(!actOnce) {
-            updateStatus(getHearts());
+            updateStatus(getHearts()); //Zeigt die Herzen in der Statusleiste an.
             actOnce = true;
         }
-        if(isTouching(Enemies.class)) {
+        if(isTouching(Enemies.class)) { //Schaden bei Berührung mit dem Gegner.
             removeHeart(1);
             updateStatus(getHearts());
         }
-        if(canTakeItem()) {
+        if(canTakeItem()) { //Nimmt ein Item auf.
             takeItem();
         }
-        if(Greenfoot.isKeyDown("space") && item != null) {
+        if(Greenfoot.isKeyDown("space") && item != null) { //Benutzt ein Item.
             item.useItem(this);
         }
-        if (Greenfoot.isKeyDown("w")) {
+        if (Greenfoot.isKeyDown("w")) { //Bewegung.
             move(Directions.UP);
         }
         if (Greenfoot.isKeyDown("a")) {
@@ -56,7 +57,7 @@ public class Player extends Entity {
         item = (Item) getOneIntersectingObject(Item.class);
         item.setLocation(6, 0);
     }
-    public void attack(int damage, int range) {
+    public void attack(int damage, int range) { //Greift Gener an (von Items benutzt)
         List enemies = getNeighbours(range, false, Enemies.class);
         for(int i = 0; i < enemies.size(); i++) {
             Enemies enemy = (Enemies) enemies.get(i);

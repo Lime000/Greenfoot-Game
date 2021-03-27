@@ -1,6 +1,8 @@
 import greenfoot.*;
 import java.util.List;
 public class Enemy1 extends Enemies {
+    //Enemy1 versucht immer auf dem schnellsten Weg zu dem Spieler zu kommen.
+    //(Wenn er in Reichweite ist.)
     public Enemy1() {
         setHearts(2);
     }

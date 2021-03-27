@@ -1,6 +1,7 @@
 import greenfoot.*;
 public abstract class Solid extends Actor {
-    private String connections = "";
+    //Jedes Solid kann herausfinden, wo er benachbarte Solids hat
+    private String connections = ""; 
     public void setLocation(int x, int y) {
         super.setLocation(x, y);
         update(this);

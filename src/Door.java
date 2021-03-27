@@ -1,5 +1,7 @@
 import greenfoot.*;
 public class Door extends Solid {
+    //Door passt sein Bild an die benachbarten Solids an 
+    //und kann geöffnet werden.
     public void open() {
         getWorld().removeObject(this);
     }

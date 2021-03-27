@@ -2,6 +2,10 @@ import greenfoot.*;
 import java.util.List;
 import java.util.LinkedList;
 public class Enemy2 extends Enemies {
+    //Enemy2 hat ein anderes Bewegungs-Muster.
+    //Er speichert seine nächsten Bewegungen in einer Liste
+    //und führt sie dann aus.
+    //-> leichter Auszuweichen.
     LinkedList<Directions> nextMoves = new LinkedList();
     public Enemy2() {
         setHearts(3);
@@ -13,13 +17,13 @@ public class Enemy2 extends Enemies {
                 move(nextMoves.remove(0));
             } else {
                 List objectsInRange = getObjectsInRange(5, Player.class);
-                if (!objectsInRange.isEmpty()) { //überprüfen, ob der Spieler in Reichweite ist
+                if (!objectsInRange.isEmpty()) { //überprüfen, ob der Spieler in Reichweite ist.
                     Player player = (Player) objectsInRange.get(0);
-                    int playerX = player.getX(); //Die Position des Spielers
+                    int playerX = player.getX(); //Die Position des Spielers.
                     int playerY = player.getY();
-                    int ownX = getX(); //Die eigene Position
+                    int ownX = getX(); //Die eigene Position.
                     int ownY = getY();
-                    for(int i = 0; i <= 3; i++) { // Die nächsten drei Bewegungen finden
+                    for(int i = 0; i <= 3; i++) { // Die nächsten drei Bewegungen finden.
                         if (ownX > playerX){
                             nextMoves.add(Directions.LEFT);
                             ownX --;

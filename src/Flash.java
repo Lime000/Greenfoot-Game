@@ -1,5 +1,8 @@
 import greenfoot.*;
 public class Flash extends Item {
+    //Flash hat, wie Sword, eine Haltbarkeit (durability) 
+    //und kann über den Player angreifen. 
+    //(Hat aber anderen Schaden und Reichweite)
     private int durability = 2;
     public void useItem(Player player) {
         super.useItem(player);

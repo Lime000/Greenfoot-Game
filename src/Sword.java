@@ -1,5 +1,7 @@
 import greenfoot.*;
 public class Sword extends Item {
+    //Sword hat eine Haltbarkeit (durability) 
+    //und kann über den Player angreifen.
     private int durability = 4;
     public void useItem(Player player) {
         super.useItem(player);

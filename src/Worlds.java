@@ -15,5 +15,6 @@ public class Worlds extends World {
         for(int i=0; i<20; i++) {
             addObject(new StatusBar(), i, 0);
         }
+        showText("World-Wanderer", 17, 0);
     }
 }

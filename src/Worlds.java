@@ -13,7 +13,7 @@ public class Worlds extends World {
     }
     public void prepare() { 
         for( int i=0; i<20; i++) {
-            addObject(new Wall(new GreenfootImage("statusleiste.png")),i,0);
+            addObject(new Wall(new GreenfootImage("StatusBar.png")),i,0);
         }
     }
 }

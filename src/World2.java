@@ -36,12 +36,5 @@ public class World2 extends Worlds
         addObject(door2,8,7);
         Button button = new Button(door);
         addObject(button,10,14);
-        Button button2 = new Button(door2);
-        addObject(button2,0,1);
-        Sword sword = new Sword();
-        addObject(sword,2,6);
-        Flash flash = new Flash();
-        addObject(flash,6,1);
     }
-    
 }

@@ -9,9 +9,7 @@ public class Item extends Actor {
         }
     }
     public void removeItem() {
-        World world = getWorld();
         player.removeItem();
-        world.removeObject(this);
-        world.showText("", 6, 0);
+        getWorld().removeObject(this);
     }
 }

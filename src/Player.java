@@ -37,8 +37,8 @@ public class Player extends Entity {
         }
     }
     public void updateStatus(int hearts) {
-        getWorld().showText(String.valueOf(hearts), 0, 0);
         World world = getWorld();
+        world.showText(String.valueOf(hearts), 0, 0);
         for(int i = 0; i < 5; i++) {
             world.removeObjects(world.getObjectsAt(i, 0, Heart.class));
         }
@@ -55,7 +55,6 @@ public class Player extends Entity {
         }
         item = (Item) getOneIntersectingObject(Item.class);
         item.setLocation(6, 0);
-        System.out.println("Item");
     }
     public void attack(int damage, int range) {
         List enemies = getNeighbours(range, false, Enemies.class);
